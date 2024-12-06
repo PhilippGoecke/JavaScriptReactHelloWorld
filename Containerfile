@@ -13,6 +13,7 @@ RUN cat /react-app/package.json
 
 RUN npm uninstall react react-dom \
   && npm install react@18 react-dom@18 \
+  && npm install --save-dev web-vitals \
   && npm view react version
 
 RUN cat /react-app/package.json
