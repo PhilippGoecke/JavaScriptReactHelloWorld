@@ -6,9 +6,7 @@ RUN node -v
 RUN npm -v
 RUN npx -v
 
-RUN npm init react-app RUN sed -i "s%import './App.css';%import React from 'react';\nimport './App.css';%g" /react-app/src/App.js
-
-RUN sed -i "s%Learn React%Learn React!<br />Version: {React.version}%g" /react-app/src/App.js \
+RUN npm init react-app /react-app \
   && npm view react version
 
 RUN cat /react-app/package.json
