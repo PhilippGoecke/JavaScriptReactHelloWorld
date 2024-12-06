@@ -11,8 +11,8 @@ RUN npm init react-app /react-app \
 
 RUN cat /react-app/package.json
 
-RUN npm uninstall react react-dom --save \
-  && npm install react@18 react-dom@18 --save \
+RUN npm uninstall react react-dom \
+  && npm install react@18 react-dom@18 \
   && npm view react version
 
 RUN cat /react-app/package.json
