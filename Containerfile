@@ -47,7 +47,7 @@ RUN sed -i "s%Learn React%Learn React!<br />Version: {React.version}%g" /react-a
 
 RUN yarn run build
 
-FROM docker.io/nginx:stable-bookworm
+FROM docker.io/nginx:stable-trixie
 
 EXPOSE 80
 
